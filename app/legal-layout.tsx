@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { Footer, Header } from "./ui";
+import { launchDetailsMissing, site } from "../lib/site";
+export function LegalPage({title,updated,children}:{title:string;updated:string;children:React.ReactNode}){return <main><Header/><article className="legal"><p className="eyebrow">LEGAL</p><h1>{title}</h1><p className="legal-updated">Last updated: {updated}</p>{launchDetailsMissing&&<aside className="legal-alert"><b>Launch requirement:</b> the legal entity name, business address, and governing law must be configured in environment variables before publishing this site.</aside>}<div className="legal-content">{children}</div><p className="legal-contact">Questions about this document? Contact <a href={`mailto:${site.privacyEmail}`}>{site.privacyEmail}</a>.</p></article><Footer/></main>}
+export function PolicyLinks(){return <nav className="policy-links" aria-label="Legal policies"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/cookies">Cookies</Link><Link href="/refunds">Refunds</Link></nav>}
