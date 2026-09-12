@@ -1,0 +1,9 @@
+# Use Python 3.10–3.13. CrewAI does not currently publish compatible wheels for Python 3.14.
+crewai>=1.0.0
+ddgs>=9.0.0
+fastapi>=0.115.0
+pymupdf>=1.24.0
+python-dotenv>=1.0.0
+python-multipart>=0.0.9
+pydantic>=2.7.0
+uvicorn[standard]>=0.30.0
